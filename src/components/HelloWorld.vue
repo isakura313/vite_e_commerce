@@ -1,4 +1,5 @@
 <template>
+<h2>Привет пашок</h2>
   <h2 class="!mt-0">{{ props.msg }}</h2>
   <button
     class="px-3 py-2 bg-white border border-gray-300 rounded-md shadow"

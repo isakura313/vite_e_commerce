@@ -8,6 +8,7 @@ import { getters, Getters } from './getters'
 import { state } from './state'
 import type { State } from './state'
 
+// eslint-disable-next-line symbol-description
 export const key: InjectionKey<VuexStore<State>> = Symbol()
 
 export const store = createStore({
