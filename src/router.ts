@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Index from '@/pages/Index.vue'
+import Dashboard from '@/pages/Dashboard.vue';
 
 const routes = [
   {
@@ -8,6 +9,13 @@ const routes = [
     component: Index,
     meta: {
       title: 'Vite + Vue + TypeScript + Tailwind Starter Template',
+    },
+  },
+  {
+    path: '/dashboard',
+    component: Dashboard,
+    meta: {
+      title: 'Dashboard',
     },
   },
 ]
