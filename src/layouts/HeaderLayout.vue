@@ -18,6 +18,6 @@
 
 <script setup lang="ts">
 import CartIcon  from 'vue-material-design-icons/Cart.vue';
-import HeartIcon  from 'vue-material-design-icons/heart.vue';
+import HeartIcon  from 'vue-material-design-icons/Heart.vue';
 
 </script>
