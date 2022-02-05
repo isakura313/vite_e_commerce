@@ -2,11 +2,22 @@
     <header class="flex justify-center bg-blue-700 text-white pt-4 pb-4 text-xl">
         <nav class="w-1/4 flex space-x-16">
             <router-link to="/">Home</router-link>
+            <router-link to="/">Home</router-link>
+            <router-link to="/">Home</router-link>
             <router-link to="/dashboard">Аналитика</router-link>
+            <router-link to="/cart">
+            <CartIcon/>
+            </router-link>
+            <router-link to="/likes">
+            <HeartIcon/>
+            </router-link>
         </nav>
     </header>
 </template>
 
 
 <script setup lang="ts">
+import CartIcon  from 'vue-material-design-icons/Cart.vue';
+import HeartIcon  from 'vue-material-design-icons/heart.vue';
+
 </script>
