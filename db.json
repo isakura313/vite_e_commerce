@@ -27,6 +27,34 @@
             "img":"https://cdn1.ozone.ru/s3/multimedia-m/wc1200/6025120498.jpg",
             "price": 5990,
             "discount": true
+        },
+        {
+            "id": 192732761,
+            "name": "Кофемашина Nivona CafeRomatica NICR 520",
+            "img":"https://cdn1.ozone.ru/s3/multimedia-r/wc1200/6211585815.jpg",
+            "price": 33990,
+            "discount": true
+        },
+        {
+            "id": 262458972,
+            "name": "Призрак в кольчуге",
+            "img":"https://cdn1.ozone.ru/s3/multimedia-m/wc1200/6189698062.jpg",
+            "price": 115,
+            "discount": true
+        },
+        {
+            "id": 145152066,
+            "name": "Туалетная бумага Zewa Deluxe Белая",
+            "img":"https://cdn1.ozone.ru/s3/multimedia-q/wc1200/6148881554.jpg",
+            "price": 389,
+            "discount": false
+        },
+        {
+            "id": 186782306,
+            "name": "Зубная паста Biorepair Gum",
+            "img":"https://cdn1.ozone.ru/s3/multimedia-a/wc1200/6248109670.jpg",
+            "price": 578,
+            "discount": true
         }
     ],
     "cart":[
