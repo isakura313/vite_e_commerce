@@ -1,6 +1,8 @@
 <template>
-<h1>hello</h1>
+<div class="min-h-96">
+<h1>Панель аналитики</h1>
   <v-chart class="chart" :option="option" />
+</div>
 </template>
 
 <script lang="ts">

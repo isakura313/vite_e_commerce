@@ -1,8 +1,10 @@
 
 <template>
+<div class="h-screen">
 <HeaderLayoutVue/>
   <router-view></router-view>
   <FooterLayout />
+  </div>
 </template>
 
 
