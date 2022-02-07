@@ -1,8 +1,5 @@
 export interface State {
-  debug: boolean
-  version: string
-  isInitialized: boolean
-  count: number
+  cartCount: number
 }
 
 const versionString =
@@ -11,8 +8,5 @@ const versionString =
     : import.meta.env.VITE_APP_VERSION
 
 export const state: State = {
-  debug: import.meta.env.MODE === 'development',
-  version: versionString,
-  isInitialized: false,
-  count: 0,
+  cartCount: 0,
 }
