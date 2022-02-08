@@ -5,6 +5,7 @@
             "name": "Фен для волос Rowenta",
             "img": "https://cdn1.ozone.ru/s3/multimedia-3/wc1200/6139148103.jpg",
             "price": 2929,
+            "oldprice": 4560,
             "discount": true
         },
         {
@@ -12,6 +13,7 @@
             "name": "Смартфон Xiaomi Redmi Note",
             "img": "https://cdn1.ozone.ru/s3/multimedia-s/wc1200/6067361284.jpg",
             "price": 17980,
+            "oldprice": 19256,
             "discount": true
         },
         {
@@ -19,6 +21,7 @@
             "name": "Бытовой пылесос Philips XB2123/08",
             "img":"https://cdn1.ozone.ru/s3/multimedia-a/wc1200/6125707438.jpg",
             "price": 6790,
+            "oldprice": 7356,
             "discount": true
         },
         {
@@ -26,6 +29,7 @@
             "name": "Утюг Tefal Turbo",
             "img":"https://cdn1.ozone.ru/s3/multimedia-m/wc1200/6025120498.jpg",
             "price": 5990,
+            "oldprice": 7356,
             "discount": true
         },
         {
@@ -33,6 +37,7 @@
             "name": "Кофемашина Nivona CafeRomatica NICR 520",
             "img":"https://cdn1.ozone.ru/s3/multimedia-r/wc1200/6211585815.jpg",
             "price": 33990,
+            "oldprice": 35999,
             "discount": true
         },
         {
@@ -40,6 +45,7 @@
             "name": "Призрак в кольчуге",
             "img":"https://cdn1.ozone.ru/s3/multimedia-m/wc1200/6189698062.jpg",
             "price": 115,
+            "oldprice": 156,
             "discount": true
         },
         {
@@ -47,6 +53,7 @@
             "name": "Туалетная бумага Zewa Deluxe Белая",
             "img":"https://cdn1.ozone.ru/s3/multimedia-q/wc1200/6148881554.jpg",
             "price": 389,
+            "oldprice": 389,
             "discount": false
         },
         {
@@ -54,6 +61,7 @@
             "name": "Зубная паста Biorepair Gum",
             "img":"https://cdn1.ozone.ru/s3/multimedia-a/wc1200/6248109670.jpg",
             "price": 578,
+            "oldprice": 999,
             "discount": true
         }
     ],
