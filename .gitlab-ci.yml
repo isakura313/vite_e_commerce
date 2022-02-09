@@ -28,7 +28,7 @@ test:
     - yarn --frozen-lockfile
     # - yarn test:ci-components
     - yarn start
-    - yarn test:ci
+    # - yarn test:ci
   coverage: '/Lines\s+:\s(\d+.?\d+)%/'
   artifacts:
     paths:

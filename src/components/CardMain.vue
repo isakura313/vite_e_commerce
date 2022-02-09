@@ -48,8 +48,15 @@
     },
     methods: {
       addToCart(id: number): void {
-        store.commit("addToCart", id);
+        store.commit("INCREMENTCART", id);
       },
     },
+    computed:{
+      inStore(){
+        const cart = store.getters.getCart;
+        const result = cart.filter((el:Product)=>  el.id === this.$props.product.id)
+        return result
+      }
+    }
   });
 </script>

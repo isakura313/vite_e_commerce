@@ -2,11 +2,15 @@ import { GetterTree } from 'vuex'
 import { State } from './state'
 
 export type Getters = {
-  getCartCount(state: State): boolean
+  getCart(state:State):[];
+  productCount(state:State):number
 }
 
 export const getters: GetterTree<State, State> & Getters = {
-  getCartCount(state) {
-    return !state.cartCount
+  getCart(state) {
+    return state.cart
   },
+  productCount(state){
+    return state.cart.length
+  }
 }

@@ -19,6 +19,7 @@
       <router-link to="/cart">
         <CartIcon />
       </router-link>
+      {{store.getters.productCount}}
       <router-link to="/likes">
         <HeartIcon />
       </router-link>
@@ -27,6 +28,7 @@
 </template>
 
 <script setup lang="ts">
+  import {store} from "../store";
   import CartIcon from "vue-material-design-icons/Cart.vue";
   import HeartIcon from "vue-material-design-icons/Heart.vue";
   import SearchIcon from "vue-material-design-icons/Magnify.vue";

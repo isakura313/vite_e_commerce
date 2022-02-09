@@ -10,7 +10,7 @@ export type Mutations<S = State> = {
 }
 
 export const mutations: MutationTree<State> & Mutations = {
-  [Mutation.INCREMENTCART](state: State, payload = 1) {
-    state.cartCount += payload
+  [Mutation.INCREMENTCART](state: State, payload) {
+    state.cart.push(payload);
   },
 }
