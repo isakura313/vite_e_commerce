@@ -3,7 +3,6 @@
     <h1 class="font-sans text-lg font-bold justify-center flex  mb-8">Главная страница</h1>
     <div class="wrapper grid grid-cols-4 gap-16 w-4/6"     v-if="loader">
     <CardMain
-
       v-for="product in products"
       :key="product.id"
       :product = "product"
