@@ -5,7 +5,7 @@
         :style="{ backgroundImage: `url(${product.img})` }"
         class="h-64 w-64 bg-no-repeat bg-center bg-contain"
       ></div>
-      <div class="flex flex-col justify-around">
+      <div class="flex flex-col justify-center h-58">
       <div>цена</div>
       <div v-if="product.discount">
         <span
