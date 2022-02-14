@@ -1,10 +1,12 @@
 <template>
+  <div class="flex flex-column justify-center">
+    <h1 class="text-lg font-bold">Корзина товаров</h1>
+  </div>
   <div class="flex flex-column">
-    <h1 class="font-lg font-bold">Корзина товаров</h1>
     {{count}}
     <div>
       <CartProduct
-        v-for="product in cart"
+        v-for="product in store.state.cart"
         :key="product.id"
         :product="product"
       />
@@ -17,8 +19,6 @@
 import { useStore, Mutation } from '@/store/index'
 
   import CartProduct from "../components/CartProduct.vue";
-  import { ref, onMounted } from "vue";
+  import { reactive, onMounted } from "vue";
   const store = useStore()
-  const cart = ref([])
-  cart.value = store.state.cart
 </script>
