@@ -1,5 +1,5 @@
 <template>
-<div>
+  <div>
     <div class="flex h-4/5 w-72 mb-4">
       <div
         :style="{ backgroundImage: `url(${product.img})` }"
@@ -8,7 +8,7 @@
       <div v-if="product.discount">
         <span
           :class="[
-            product.discount ? 'text-red-500 font-bold mt-2 mb-2' : 'p-2 m-2',
+            product.discount ? 'text-red-500 font-bold mt-2 mb-2' : 'p-2 m-2'
           ]"
           >{{ product.price }}</span
         >
@@ -23,19 +23,19 @@
     </div>
     <button
       v-if="!chooseProduct"
-      class="bg-indigo-500 hover:bg-red-500 text-white h-12 w-24 rounded-md"
-      @click="deleteFromCard(id)"
-    >
-      
-    </button>
-    </div>
+      class="bg-red-700 hover:bg-red-600 text-white h-12 w-24 rounded-md"
+      @click="deleteFromCard(product.id)"
+    > Удалить</button>
+  </div>
 </template>
 
-<script lang='ts'>
-  import { PropType, defineComponent } from "vue";
-  import { store } from "../store";
+<script lang="ts">
+  import { useStore } from "@/store/index";
+
+  import { PropType, defineComponent, computed } from "vue";
   import IncrementProduct from "./IncrementProduct.vue";
 
+const store = useStore()
   interface Product {
     id: number;
     name: string;
@@ -47,22 +47,21 @@
   export default defineComponent({
     data() {
       return {
-        chooseProduct: false,
+        chooseProduct: false
       };
     },
     components: {
-      IncrementProduct,
+      IncrementProduct
     },
     props: {
       product: {
-        type: Object as PropType<Product>,
-      },
+        type: Object as PropType<Product>
+      }
     },
     methods: {
-      addToCart(product: Product): void {
-        this.chooseProduct = true;
-        store.commit("INCREMENTCART", product);
-      },
+      deleteFromCard(id: number): void {
+        store.commit("DECREMENTCART", id);
+      }
     },
     computed: {
       inStore() {
@@ -71,7 +70,7 @@
           (el: Product) => el.id === this.$props.product.id
         );
         return result;
-      },
-    },
+      }
+    }
   });
 </script>
