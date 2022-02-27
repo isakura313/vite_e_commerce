@@ -1,10 +1,17 @@
 <template>
+<<<<<<< HEAD
   <div>
     <div class="flex h-4/5 w-72 mb-4">
+=======
+<div class="flex items-end border-2 p-2 m-2">
+    <div class="flex h-4/5 w-72 mb-4 content-center">
+>>>>>>> 5350a1e71ced91a485e43635225f0e75d2ba8a35
       <div
         :style="{ backgroundImage: `url(${product.img})` }"
         class="h-64 w-64 bg-no-repeat bg-center bg-contain"
       ></div>
+      <div class="flex flex-col justify-center h-58">
+      <div>цена</div>
       <div v-if="product.discount">
         <span
           :class="[
@@ -15,11 +22,13 @@
         <span class="line-through ml-4">{{ product.oldprice }}</span>
       </div>
       <span v-else class="font-bold">{{ product.oldprice }}</span>
-      <router-link
+            <router-link
         to="/"
         class="hover:text-indigo-700 hover:font-bold font-bold"
         >{{ product.name }}</router-link
       >
+      </div>
+
     </div>
     <button
       v-if="!chooseProduct"
