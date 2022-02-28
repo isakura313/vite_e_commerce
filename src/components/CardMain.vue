@@ -28,7 +28,7 @@
     >
       Купить
     </button>
-    <IncrementProduct v-if="chooseProduct" :count="1"  />
+    <IncrementProduct v-if="chooseProduct" :count="product.count" :product="product"  />
   </div>
 </template>
 

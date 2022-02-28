@@ -13,6 +13,7 @@ interface Product {
   price: number;
   oldprice: number;
   discount: boolean;
+  count: number
 }
 export type Mutations<S = State> = {
   [Mutation.INCREMENTCART](state: S, payload: Product): void
@@ -21,15 +22,16 @@ export type Mutations<S = State> = {
 
 export const mutations: MutationTree<State> & Mutations = {
   [Mutation.INCREMENTCART](state: State, payload:Product) {
-    console.log(payload)
 
-   state.cart.map((product)=>{
-      if(product.id  == payload.id){
+   state.cart.map((product:Product) =>{
+      if(product.id  === payload.id){
         console.log(product)
         product.count++;
+        return;
       } else{
         payload.count = 1;
         state.cart.push(payload)
+        return
       }
     })
     if(state.cart.length === 0){
@@ -38,7 +40,14 @@ export const mutations: MutationTree<State> & Mutations = {
     }
   },
   [Mutation.DECREMENTCART](state: State, payload:number) {
-    // state.cart.push(payload);
-    state.cart = state.cart.filter((item:Product)=>item.id !== payload)
+    state.cart.map((item)=>{
+      if(item.id === payload){
+        if(item.count>1){
+          item.count--;
+        } else{
+          state.cart.filter((item:Product)=>item.id !== payload)
+        }
+      }
+    })
   },
 }

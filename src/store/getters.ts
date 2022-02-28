@@ -13,7 +13,15 @@ export const getters: GetterTree<State, State> & Getters = {
     return state.cart
   },
   productCount(state){
-    return state.cart.length
+    if(state.cart.length>0){
+    const counts = state.cart.map((item)=>{
+      return item.count
+    })
+    return counts.reduce((sum, current) => sum + current, 0);
+  } else {
+    return 0
+  }
+      
   },
 
   finalSum(state){

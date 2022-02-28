@@ -26,6 +26,7 @@
             >{{ product.name }}</router-link
           >
         </div>
+          <span> Количество {{product.count}}</span>
       </div>
       <button
         v-if="!chooseProduct"
