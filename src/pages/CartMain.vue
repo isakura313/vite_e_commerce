@@ -1,9 +1,7 @@
 <template>
-  <div class="flex justify-center p-4">
-    <h1 class="text-lg font-bold">Корзина товаров</h1>
-  </div>
-  <div class="flex flex-column mb-8">
-    <div>
+  <div class="flex flex-col justify-center items-center m-4">
+    <h1 class="text-2xl font-bold">Корзина товаров</h1>
+    <div class="flex flex-col items-center">
       <CartProduct
         v-for="product in store.state.cart"
         :key="product.id"
@@ -20,10 +18,10 @@
 
 
 <script setup lang="ts" >
-import { useStore, Mutation } from '@/store/index'
+  import { useStore, Mutation } from "@/store/index";
 
   import CartProduct from "../components/CartProduct.vue";
-  import { ref, onMounted, computed } from "vue";
-  const store = useStore()
-  const count = computed(() => store.getters.finalSum)
+  import { computed, onMounted } from "vue";
+  const store = useStore();
+  const cart = computed(() => store.getters.getCart);
 </script>

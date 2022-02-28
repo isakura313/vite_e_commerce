@@ -19,7 +19,7 @@
       <router-link to="/cart" class="hover:text-red">
         <CartIcon class="icon" />
       </router-link>
-      {{store.getters.productCount}}
+      {{ cartCount }}
       <router-link to="/likes">
         <HeartIcon  class="icon"/>
       </router-link>
@@ -28,10 +28,13 @@
 </template>
 
 <script setup lang="ts">
-  import {store} from "../store";
+  import { useStore } from "@/store/index";
+  import { computed } from "vue";
   import CartIcon from "vue-material-design-icons/Cart.vue";
   import HeartIcon from "vue-material-design-icons/Heart.vue";
   import SearchIcon from "vue-material-design-icons/Magnify.vue";
+  const store = useStore();
+  const cartCount = computed(() => store.getters.productCount);
 </script>
 
 
