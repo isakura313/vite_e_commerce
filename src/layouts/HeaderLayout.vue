@@ -16,12 +16,12 @@
           <SearchIcon />
         </button>
       </div>
-      <router-link to="/cart">
-        <CartIcon />
+      <router-link to="/cart" class="hover:text-red">
+        <CartIcon class="icon" />
       </router-link>
       {{store.getters.productCount}}
       <router-link to="/likes">
-        <HeartIcon />
+        <HeartIcon  class="icon"/>
       </router-link>
     </nav>
   </header>
@@ -33,3 +33,10 @@
   import HeartIcon from "vue-material-design-icons/Heart.vue";
   import SearchIcon from "vue-material-design-icons/Magnify.vue";
 </script>
+
+
+<style scoped>
+.icon:hover{
+  color: red;
+}
+</style>

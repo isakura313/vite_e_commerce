@@ -1,6 +1,6 @@
 <template>
 <div class="flex items-end border-2 p-2 m-2">
-    <div class="flex h-4/5 w-72 mb-4 content-center">
+    <div class="flex h-4/5 w-3/5 mb-4 content-center">
       <div
         :style="{ backgroundImage: `url(${product.img})` }"
         class="h-64 w-64 bg-no-repeat bg-center bg-contain"
