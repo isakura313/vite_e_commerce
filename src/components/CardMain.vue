@@ -10,11 +10,11 @@
           :class="[
             product.discount ? 'text-red-500 font-bold mt-2 mb-2' : 'p-2 m-2',
           ]"
-          >{{ product.price }}</span
+          >{{ product.price }} ₽</span
         >
         <span class="line-through ml-4">{{ product.oldprice }}</span>
       </div>
-      <span v-else class="font-bold">{{ product.oldprice }}</span>
+      <span v-else class="font-bold">{{ product.oldprice }}  ₽</span>
       <router-link
         to="/"
         class="hover:text-indigo-700 hover:font-bold font-bold"
@@ -28,16 +28,19 @@
     >
       Купить
     </button>
-    <IncrementProduct v-if="chooseProduct" />
+    <IncrementProduct v-if="chooseProduct" :count="1"  />
   </div>
 </template>
 
 
 <script lang='ts'>
-  import { PropType, defineComponent } from "vue";
+  // import { useStore } from "@/store/index";
+
+  import { PropType, defineComponent, computed } from "vue";
   import { store } from "../store";
   import IncrementProduct from "./IncrementProduct.vue";
-
+  // const cart = computed(() => store.getters.getCart);
+  // const store = useStore();
   interface Product {
     id: number;
     name: string;
@@ -45,6 +48,7 @@
     price: number;
     oldprice: number;
     discount: boolean;
+    count?: number
   }
   export default defineComponent({
     data() {
@@ -59,6 +63,14 @@
       product: {
         type: Object as PropType<Product>,
       },
+    },
+    mounted(){
+      store.state.cart.map((item)=>{
+        if(item.id == this.product.id){
+          this.chooseProduct = true;
+
+        }
+      })
     },
     methods: {
       addToCart(product: Product): void {

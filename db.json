@@ -63,6 +63,22 @@
             "price": 578,
             "oldprice": 999,
             "discount": true
+        },
+        {
+            "id": 391851832,
+            "name": "Майка FAXE красная",
+            "img":"https://cdn1.ozone.ru/s3/multimedia-3/wc1200/6151833819.jpg",
+            "price": 1599,
+            "oldprice": 2099,
+            "discount": true
+        },
+        {
+            "id": 391851824,
+            "name": "Майка FAXE желтая",
+            "img":"https://cdn1.ozone.ru/s3/multimedia-y/wc1200/6151833814.jpg",
+            "price": 1599,
+            "oldprice": 2099,
+            "discount": true
         }
     ],
     "cart":[

@@ -21,7 +21,21 @@ export type Mutations<S = State> = {
 
 export const mutations: MutationTree<State> & Mutations = {
   [Mutation.INCREMENTCART](state: State, payload:Product) {
-    state.cart.push(payload);
+    console.log(payload)
+
+   state.cart.map((product)=>{
+      if(product.id  == payload.id){
+        console.log(product)
+        product.count++;
+      } else{
+        payload.count = 1;
+        state.cart.push(payload)
+      }
+    })
+    if(state.cart.length === 0){
+      payload.count = 1;
+      state.cart.push(payload)
+    }
   },
   [Mutation.DECREMENTCART](state: State, payload:number) {
     // state.cart.push(payload);

@@ -18,4 +18,5 @@ export const getters: GetterTree<State, State> & Getters = {
 
   finalSum(state){
     const cartPrices = state.cart.map((product)=>{ return product.price})
+  }
 }
