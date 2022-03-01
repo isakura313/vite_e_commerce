@@ -40,7 +40,7 @@
 <script lang='ts'>
   // import { useStore } from "@/store/index";
 
-  import { PropType, defineComponent, computed } from "vue";
+  import { PropType, defineComponent } from "vue";
   import { store } from "../store";
   import IncrementProduct from "./IncrementProduct.vue";
   // const cart = computed(() => store.getters.getCart);

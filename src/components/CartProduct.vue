@@ -4,7 +4,7 @@
       <div class="flex h-4/5 w-3/5 mb-4 content-center">
         <div
           :style="{ backgroundImage: `url(${product.img})` }"
-          class="h-64 w-64 bg-no-repeat bg-center bg-contain"
+          class="w-64 bg-no-repeat bg-center bg-contain"
         ></div>
         <div class="flex flex-col justify-center h-58">
           <div>цена</div>

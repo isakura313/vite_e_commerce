@@ -21,10 +21,13 @@ export const getters: GetterTree<State, State> & Getters = {
   } else {
     return 0
   }
-      
   },
-
   finalSum(state){
-    const cartPrices = state.cart.map((product)=>{ return product.price})
+    let count = 0;
+    for(let i = 0; i < state.cart.length;i++){
+      console.log(count);
+      count += state.cart[i].price * state.cart[i].count
+    }
+    return count 
   }
 }
