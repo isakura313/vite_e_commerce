@@ -22,30 +22,30 @@ export type Mutations<S = State> = {
 
 export const mutations: MutationTree<State> & Mutations = {
   [Mutation.INCREMENTCART](state: State, payload:Product) {
+    let flag = false;
+    for(let i = 0; i < state.cart.length;i++){
+      if(state.cart[i].id === payload.id){
+        state.cart[i].count++
+        flag = true
+    }
+  }
+  if(!flag){
+    payload.count = 1;
+    state.cart.push(payload);
+  }
 
-   state.cart.map((product:Product) =>{
-      if(product.id  === payload.id){
-        console.log(product)
-        product.count++;
-        return;
-      } else{
-        payload.count = 1;
-        state.cart.push(payload)
-        return
-      }
-    })
     if(state.cart.length === 0){
       payload.count = 1;
       state.cart.push(payload)
     }
   },
   [Mutation.DECREMENTCART](state: State, payload:number) {
-    state.cart.map((item)=>{
+    state.cart.map((item, index)=>{
       if(item.id === payload){
         if(item.count>1){
           item.count--;
         } else{
-          state.cart.filter((item:Product)=>item.id !== payload)
+          state.cart.splice(index, 1);
         }
       }
     })

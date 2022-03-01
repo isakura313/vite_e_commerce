@@ -14,7 +14,7 @@
         >
         <span class="line-through ml-4">{{ product.oldprice }}</span>
       </div>
-      <span v-else class="font-bold">{{ product.oldprice }}  ₽</span>
+      <span v-else class="font-bold">{{ product.oldprice }} ₽</span>
       <router-link
         to="/"
         class="hover:text-indigo-700 hover:font-bold font-bold"
@@ -22,13 +22,17 @@
       >
     </div>
     <button
-      v-if="!chooseProduct"
+      v-if="!inStore"
       class="bg-indigo-500 hover:bg-red-500 text-white h-12 w-24 rounded-md"
       @click="addToCart(product)"
     >
       Купить
     </button>
-    <IncrementProduct v-if="chooseProduct" :count="product.count" :product="product"  />
+    <IncrementProduct
+      v-if="inStore"
+      :count="product.count"
+      :product="product"
+    />
   </div>
 </template>
 
@@ -48,7 +52,7 @@
     price: number;
     oldprice: number;
     discount: boolean;
-    count?: number
+    count?: number;
   }
   export default defineComponent({
     data() {
@@ -64,13 +68,12 @@
         type: Object as PropType<Product>,
       },
     },
-    mounted(){
-      store.state.cart.map((item)=>{
-        if(item.id == this.product.id){
+    mounted() {
+      store.state.cart.map((item) => {
+        if (item.id == this.product.id) {
           this.chooseProduct = true;
-
         }
-      })
+      });
     },
     methods: {
       addToCart(product: Product): void {
@@ -84,7 +87,12 @@
         const result = cart.filter(
           (el: Product) => el.id === this.$props.product.id
         );
-        return result;
+        console.log(result);
+        if (result.length !== 0) {
+          return true;
+        } else {
+          return false;
+        }
       },
     },
   });
