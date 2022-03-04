@@ -19,14 +19,14 @@
             >
             <span class="line-through ml-4">{{ product.oldprice }} </span>
           </div>
-          <span v-else class="font-bold">{{ product.oldprice }}  </span>
+          <span v-else class="font-bold">{{ product.oldprice }} </span>
           <router-link
             to="/"
             class="hover:text-indigo-700 hover:font-bold font-bold"
             >{{ product.name }}</router-link
           >
         </div>
-          <span> Количество {{product.count}}</span>
+        <span> Количество {{ product.count }}</span>
       </div>
       <button
         v-if="!chooseProduct"
@@ -70,7 +70,8 @@
     },
     methods: {
       deleteFromCard(id: number): void {
-        store.commit("DECREMENTCART", id);
+        alert(id)
+        store.commit("DELETEPRODUCT", id);
       },
     },
     computed: {

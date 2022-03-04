@@ -3,7 +3,8 @@ import { State } from './state'
 
 export enum Mutation {
   INCREMENTCART = 'INCREMENTCART',
-  DECREMENTCART = 'DECREMENTCART'
+  DECREMENTCART = 'DECREMENTCART',
+  DELETEPRODUCT = 'DELETEPRODUCT'
 }
 
 interface Product {
@@ -18,6 +19,7 @@ interface Product {
 export type Mutations<S = State> = {
   [Mutation.INCREMENTCART](state: S, payload: Product): void
   [Mutation.DECREMENTCART](state: S, payload: number): void
+  [Mutation.DELETEPRODUCT](state: S, payload: number): void
 }
 
 export const mutations: MutationTree<State> & Mutations = {
@@ -49,5 +51,17 @@ export const mutations: MutationTree<State> & Mutations = {
         }
       }
     })
+  },
+  [Mutation.DELETEPRODUCT](state: State, payload:number) {
+    console.warn("delete")
+    console.log(payload)
+    console.log(state.cart)
+    state.cart.map((product:Product, index)=> {
+      if(product.id === payload){
+      state.cart.splice(index, 1);
+      }
+    })
+    // const result = words.filter(word => word.length > 6);
+    console.log(state.cart)
   },
 }

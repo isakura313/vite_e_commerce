@@ -4,7 +4,7 @@
     <h1 class="text-2xl font-bold">Корзина товаров</h1>
     <div class="flex flex-col  " >
       <CartProduct
-        v-for="product in store.state.cart"
+        v-for="product in cart"
         :key="product.id"
         :product="product"
       />
