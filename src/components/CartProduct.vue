@@ -70,7 +70,6 @@
     },
     methods: {
       deleteFromCard(id: number): void {
-        alert(id)
         store.commit("DELETEPRODUCT", id);
       },
     },

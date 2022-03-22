@@ -69,8 +69,8 @@
       },
     },
     mounted() {
-      store.state.cart.map((item) => {
-        if (item.id == this.product.id) {
+      store.state.cart.map((product:Product):void => {
+        if (product.id === this.product.id) {
           this.chooseProduct = true;
         }
       });
