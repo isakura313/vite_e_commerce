@@ -39,12 +39,12 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
   import { useStore } from "@/store/index";
 
   import { PropType, defineProps, reactive, ref, watch } from "vue";
   import IncrementProduct from "./IncrementProduct.vue";
-
+  const props = defineProps(['product'])
   const store = useStore();
   interface Product {
     id: number;
@@ -55,18 +55,18 @@
     discount: boolean;
   }
   const chooseProduct = ref(false)
-  const props = defineProps(['product'])
+
   const  deleteFromCard =(id: number)=> {
     alert(id)
     store.commit("DELETEPRODUCT", id);
   }
   const inStore = ref(false)
   const cart = reactive(store.getters.getCart);
-  watch(cart, ()=>{
-    const result = cart.filter(
-        (el: Product) => el.id === props.product.id
-    );
-    return result;
-  })
+  // watch(cart, ()=>{
+  //   const result = cart.filter(
+  //       (el: Product) => el.id === props.product.id
+  //   );
+  //   return result;
+  // })
 
 </script>

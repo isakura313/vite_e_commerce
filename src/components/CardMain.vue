@@ -43,6 +43,7 @@ import {PropType, defineComponent, defineProps, ref, reactive, watch} from "vue"
 import {store} from "../store";
 
 import IncrementProduct from "./IncrementProduct.vue";
+const props = defineProps(['product'])
 
 interface Product {
   id: number;
@@ -56,13 +57,13 @@ interface Product {
 
 const chooseProduct = ref(false);
 const inStore = ref(false);
-const props = defineProps(['product'])
 store.state.cart.map((item) => {
   if (item.id === props.product.id) {
     chooseProduct.value = true;
   }
 });
 function addToCart(product: Product){
+  console.log(props.product)
   chooseProduct.value = true;
   store.commit("INCREMENTCART", product);
 }

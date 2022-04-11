@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center">
     <div class="wrapper w-128">
     <h1 class="text-2xl font-bold">Корзина товаров</h1>
-    <div class="flex flex-col  " >
+    <div class="flex flex-col  " >{{cart}}
       <CartProduct
         v-for="product in cart"
         :key="product.id"
@@ -27,5 +27,6 @@
   import { computed, onMounted } from "vue";
   const store = useStore();
   const cart = computed(() => store.getters.getCart);
+  console.log(cart)
   const finalSum = computed(() => store.getters.finalSum);
 </script>
