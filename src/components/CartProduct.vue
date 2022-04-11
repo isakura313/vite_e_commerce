@@ -42,7 +42,7 @@
 <script lang="ts">
   import { useStore } from "@/store/index";
 
-  import { PropType, defineComponent, computed } from "vue";
+  import { PropType, defineProps, reactive, ref, watch } from "vue";
   import IncrementProduct from "./IncrementProduct.vue";
 
   const store = useStore();
@@ -54,34 +54,19 @@
     oldprice: number;
     discount: boolean;
   }
-  export default defineComponent({
-    data() {
-      return {
-        chooseProduct: false,
-      };
-    },
-    components: {
-      IncrementProduct,
-    },
-    props: {
-      product: {
-        type: Object as PropType<Product>,
-      },
-    },
-    methods: {
-      deleteFromCard(id: number): void {
-        alert(id)
-        store.commit("DELETEPRODUCT", id);
-      },
-    },
-    computed: {
-      inStore() {
-        const cart = store.getters.getCart;
-        const result = cart.filter(
-          (el: Product) => el.id === this.$props.product.id
-        );
-        return result;
-      },
-    },
-  });
+  const chooseProduct = ref(false)
+  const props = defineProps(['product'])
+  const  deleteFromCard =(id: number)=> {
+    alert(id)
+    store.commit("DELETEPRODUCT", id);
+  }
+  const inStore = ref(false)
+  const cart = reactive(store.getters.getCart);
+  watch(cart, ()=>{
+    const result = cart.filter(
+        (el: Product) => el.id === props.product.id
+    );
+    return result;
+  })
+
 </script>
