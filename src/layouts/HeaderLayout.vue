@@ -1,8 +1,8 @@
 <template>
-  <header class="flex justify-center bg-blue-700 text-white pt-4 pb-4 text-xl">
-    <nav class="w-1/4 flex space-x-16">
-      <router-link to="/">Home</router-link>
-      <router-link to="/dashboard">Аналитика</router-link>
+  <header class="flex justify-center   pt-4 pb-4 text-xl border-solid">
+    <nav class="w-9/10 flex space-x-16 items-center" >
+      <router-link to="/" class="hover:text-blue-700">Home</router-link>
+      <router-link to="/dashboard" class="hover:text-blue-700">Аналитика</router-link>
       <div class="flex">
         <input
           class="shadow appearance-none border rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
