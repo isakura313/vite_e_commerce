@@ -1,7 +1,9 @@
 <template>
+  <Loader v-if="!loader"/>
   <div class="justify-center flex flex-col items-center mb-24 mt-8">
     <h1 class="font-sans text-lg font-bold justify-center flex  mb-8">Главная страница</h1>
     <div v-if="loader" class="wrapper grid grid-cols-4 gap-16 w-4/6">
+
     <CardMain
       v-for="product in products"
       :key="product.id"
@@ -11,7 +13,17 @@
   </div>
 </template>
 
+
+
+
 <script setup lang="ts">
+// type Product = {
+//   id:1,
+//   discount: true,
+//   name:'',
+//   price:0
+// }
+  import Loader from "@/components/Loader.vue";
   import CardMain from "@/components/CardMain.vue";
   import { ref, onMounted } from "vue";
   import axios from "axios";

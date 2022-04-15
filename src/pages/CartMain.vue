@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col items-center h-5/6" >
-    <div class="wrapper w-128 " v-if="cart.length">
+  <div class="flex flex-col items-center"  style="min-height: 88vh">
+    <div class="wrapper w-128" v-if="cart.length">
     <h1 class="text-2xl font-bold">Корзина товаров</h1>
     <div class="flex flex-col" style='min-height:'>
       <CartProduct
@@ -17,7 +17,7 @@
   <h5 class="font-xl">  Итоговая сумма <span class="font-bold"> {{ finalSum }} </span> </h5> 
   </div>  
    <div class="wrapper w-128 " v-else>
-    <h1 class="text-2xl font-bold">Здесь ничего нет Срочно добавьте товар</h1>
+    <h1 class="text-2xl font-bold">Здесь ничего нет! Отправляйтесь за покупками</h1>
   </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="card flex flex-col m-4">
+  <div class="card flex flex-col m-4 ">
     <div class="flex flex-col h-4/5 mb-4">
       <div
           :style="{ backgroundImage: `url(${product.img})` }"
@@ -31,7 +31,6 @@
     </button>
     <IncrementProduct
         v-if="inStore"
-        :count="product.count"
         :product="product"
     />
   </div>
@@ -39,7 +38,7 @@
 
 
 <script lang='ts' setup>
-import {PropType, defineComponent, defineProps, ref, reactive, watch} from "vue";
+import {PropType, defineComponent, defineProps, ref, reactive, watch, onMounted} from "vue";
 import {store} from "../store";
 
 import IncrementProduct from "./IncrementProduct.vue";
@@ -54,14 +53,25 @@ interface Product {
   discount: boolean;
   count?: number;
 }
-
 const chooseProduct = ref(false);
 const inStore = ref(false);
-store.state.cart.map((item) => {
-  if (item.id === props.product.id) {
-    chooseProduct.value = true;
+onMounted( () => {
+  const result = cart.filter(
+      (el: Product) => el.id === props.product.id,
+  );
+  if (result.length !== 0) {
+    inStore.value = true;
+  } else {
+    inStore.value = false;
   }
 });
+
+
+// store.state.cart.map((item) => {
+//   if (item.id === props.product.id) {
+//     chooseProduct.value = true;
+//   }
+// });
 function addToCart(product: Product){
   console.log(props.product)
   chooseProduct.value = true;
