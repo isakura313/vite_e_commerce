@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center" >
     <div class="wrapper w-128">
     <h1 class="text-2xl font-bold">Корзина товаров</h1>
-    <div class="flex flex-col  " >{{cart}}
+    <div class="flex flex-col" style='min-height: 62vh'>
       <CartProduct
         v-for="product in cart"
         :key="product.id"

@@ -57,7 +57,6 @@
   const chooseProduct = ref(false)
 
   const  deleteFromCard =(id: number)=> {
-    alert(id)
     store.commit("DELETEPRODUCT", id);
   }
   const inStore = ref(false)
