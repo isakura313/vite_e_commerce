@@ -58,7 +58,7 @@ export const mutations: MutationTree<State> & Mutations = {
     console.log(state.cart)
     state.cart.map((product:Product, index)=> {
       if(product.id === payload){
-      state.cart.splice(index, 1);
+      return state.cart.splice(index, 1);
       }
     })
     // const result = words.filter(word => word.length > 6);

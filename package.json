@@ -2,8 +2,9 @@
   "name": "vite-ts-tailwind-starter",
   "version": "1.11.0",
   "scripts": {
-    "dev": "start vite && start json-server db.json --port 5000",
+    "dev": "json-server db.json --port 5000 & vite",
     "build": "vite build",
+    "server": "json-server db.json --port 5000",
     "preview": "vite build && vite preview",
     "start": "yarn dev & wait-on tcp:3000 -v",
     "test": "cypress open",
