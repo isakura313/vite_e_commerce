@@ -1,6 +1,6 @@
 <template>
   <Loader v-if="!loader"/>
-  <div class="justify-center flex flex-col items-center mb-24 mt-8">
+  <div class="justify-center flex flex-col items-center mb-24 mt-8" v-else>
     <h1 class="font-sans text-lg font-bold justify-center flex  mb-8">Главная страница</h1>
     <div v-if="loader" class="wrapper grid grid-cols-4 gap-16 w-4/6">
 
