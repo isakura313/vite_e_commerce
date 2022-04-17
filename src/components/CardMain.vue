@@ -1,6 +1,6 @@
 <template>
   <div class="card flex flex-col m-4 ">
-    <div class="flex flex-col h-4/5 mb-4">
+    <div class="flex flex-col h-2/3 mb-4">
       <div
           :style="{ backgroundImage: `url(${product.img})` }"
           class="h-64 bg-no-repeat bg-center bg-contain"
@@ -40,7 +40,6 @@
 <script lang='ts' setup>
 import {PropType, defineComponent, defineProps, ref, reactive, watch, onMounted} from "vue";
 import {store} from "../store";
-
 import IncrementProduct from "./IncrementProduct.vue";
 const props = defineProps(['product'])
 

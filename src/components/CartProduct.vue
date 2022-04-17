@@ -43,7 +43,7 @@
           <span v-else class="font-bold">{{ product.oldprice }} </span>
 
         </div>
-        <CustomSelect :options="options"  default="1"/>
+        <CustomSelect :options="options"  :default="product.count" @input = "updateCount"/>
       </div>
     </div>
   </div>
@@ -52,8 +52,7 @@
 <script lang="ts" setup>
   import { useStore } from "@/store/index";
   import CustomSelect from '@/components/CustomSelect.vue';
-
-  import { PropType, defineProps, reactive, ref, watch } from "vue";
+  import {PropType, defineProps, reactive, ref, watch, computed} from "vue";
   import IncrementProduct from "./IncrementProduct.vue";
   const props = defineProps(['product'])
   const store = useStore();
@@ -66,15 +65,20 @@
     discount: boolean;
   }
   const options = ref([
-      1,2,3
+      1,2,3,4,5
   ])
   const chooseProduct = ref(false)
+  const cart = computed(() => store.getters.getCart);
+
+  function updateCount(count){
+    alert(count)
+    store.commit("SETCOUNT", {id:props.product.id, count:count });
+  }
 
   const  deleteFromCard =(id: number)=> {
-    store.commit("DELETEPRODUCT", id);
   }
   const inStore = ref(false)
-  const cart = reactive(store.getters.getCart);
+  // const cart = reactive(store.getters.getCart);
   // watch(cart, ()=>{
   //   const result = cart.filter(
   //       (el: Product) => el.id === props.product.id

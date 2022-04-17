@@ -1,7 +1,8 @@
 <template>
-    <div class="custom-select" :tabindex="tabindex" @blur="open = false">
+    <div class="custom-select w-64" :tabindex="tabindex" @blur="open = false">
       <div class="selected" :class="{ open: open }" @click="open = !open">
         {{ selected }}
+        <i class="fa fa-caret-down caret"></i>
       </div>
       <div class="items" :class="{ selectHide: !open }">
         <div
@@ -15,57 +16,50 @@
         >
           {{ option }}
         </div>
+
+
       </div>
+
     </div>
 </template>
 
 
-<script>
-export default {
-  props: {
-    options: {
-      type: Array,
-      required: true,
-    },
-    default: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    tabindex: {
-      type: Number,
-      required: false,
-      default: 0,
-    },
-  },
-  data() {
-    return {
-      selected: this.default
-          ? this.default
-          : this.options.length > 0
-              ? this.options[0]
-              : null,
-      open: false,
-    };
-  },
-  mounted() {
-    this.$emit("input", this.selected);
-  },
-};
+<script setup lang="ts">
+import {defineProps, defineEmits, ref, onMounted} from "vue";
+const props = defineProps(['options', 'default', 'tabindex'])
+const emit = defineEmits(['input'])
+const selected = ref(props.default
+    ? props.default
+    : props.options.length > 0
+        ? props.options[0]
+        : null,)
+const open = ref(false)
+onMounted(()=>{
+  emit("input", selected.value);
+})
+
 </script>
 
 
 <style scoped>
-
+.caret{
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  z-index: 2
+}
 .custom-select {
   position: relative;
-  width: 100%;
   text-align: left;
   outline: none;
   height: 47px;
   line-height: 47px;
 }
 
+/*.selected{*/
+/*  position: absolute;*/
+/*  width: 200px*/
+/*}*/
 .custom-select .selected {
   border-radius: 6px;
   border: 1px solid #666666;
