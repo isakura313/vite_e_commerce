@@ -71,7 +71,6 @@
   const cart = computed(() => store.getters.getCart);
 
   function updateCount(count){
-    alert(count)
     store.commit("SETCOUNT", {id:props.product.id, count:count });
   }
 
