@@ -14,7 +14,7 @@
         <span>Доступные способы и время доставки можно выбрать при оформлении заказа</span>
         <div><span>Итоговая сумма</span> <span class="font-bold"> {{ count }}</span></div>
       </div>
-      <h5 class="font-xl"> Итоговая сумма  <CountTo :startVal='0' :endVal='finalSum' :duration='300'></CountTo> </h5>
+      <!-- <h5 class="font-xl"> Итоговая сумма  <CountTo :startVal='0' :endVal='finalSum' :duration='300'></CountTo> </h5> -->
     </div>
 
     <div class="wrapper w-128 " v-else>
@@ -28,7 +28,7 @@
 
 <script setup lang="ts">
 import {useStore, Mutation} from "@/store/index";
-import { CountTo } from 'vue3-count-to';
+// import { CountTo } from 'vue3-count-to';
 import CartProduct from "../components/CartProduct.vue";
 import {computed, onMounted, watch, ref} from "vue";
 
