@@ -27,14 +27,15 @@
 
 
 <script setup lang="ts">
-import {useStore, Mutation} from "@/store/index";
+// import {useStore, Mutation} from "@/store/index";
 // import { CountTo } from 'vue3-count-to';
+import { useCart } from '@/stores/cart'
 import CartProduct from "../components/CartProduct.vue";
 import {computed, onMounted, watch, ref} from "vue";
 
 const sum = ref(0)
-const store = useStore();
-const cart = computed(() => store.getters.getCart);
+const cartStore = useCart();
+const cart = computed(() => cartStore);
 console.log(cart)
-const finalSum = computed(() => store.getters.finalSum);
+// const finalSum = computed(() => store.getters.finalSum);
 </script>

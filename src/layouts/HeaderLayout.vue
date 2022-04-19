@@ -28,13 +28,14 @@
 </template>
 
 <script setup lang="ts">
-  import { useStore } from "@/store/index";
+  // import { useStore } from "@/store/index";
+  import { useCart } from '@/stores/cart'
   import { computed } from "vue";
   import CartIcon from "vue-material-design-icons/Cart.vue";
   import HeartIcon from "vue-material-design-icons/Heart.vue";
   import SearchIcon from "vue-material-design-icons/Magnify.vue";
-  const store = useStore();
-  const cartCount = computed(() => store.getters.productCount);
+  const cart = useCart();
+  const cartCount = computed(() => cart);
 </script>
 
 

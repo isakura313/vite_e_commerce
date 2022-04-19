@@ -50,12 +50,14 @@
 </template>
 
 <script lang="ts" setup>
-  import { useStore } from "@/store/index";
+  // import { useStore } from "@/store/index";
+  import { useCart } from '@/stores/cart'
   import CustomSelect from '@/components/CustomSelect.vue';
   import {PropType, defineProps, reactive, ref, watch, computed} from "vue";
   import IncrementProduct from "./IncrementProduct.vue";
+  const cartStore = useCart();
   const props = defineProps(['product'])
-  const store = useStore();
+  // const store = useStore();
   interface Product {
     id: number;
     name: string;
@@ -68,10 +70,10 @@
       1,2,3,4,5
   ])
   const chooseProduct = ref(false)
-  const cart = computed(() => store.getters.getCart);
+  const cart = computed(() => cartStore);
 
   function updateCount(count){
-    store.commit("SETCOUNT", {id:props.product.id, count:count });
+    // store.commit("SETCOUNT", {id:props.product.id, count:count });
   }
 
   const  deleteFromCard =(id: number)=> {

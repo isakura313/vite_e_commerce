@@ -39,7 +39,8 @@
 
 <script lang='ts' setup>
 import {PropType, defineComponent, defineProps, ref, reactive, watch, onMounted} from "vue";
-import {store} from "../store";
+import { useCart } from '@/stores/cart'
+
 import IncrementProduct from "./IncrementProduct.vue";
 const props = defineProps(['product'])
 
@@ -74,9 +75,11 @@ onMounted( () => {
 function addToCart(product: Product){
   console.log(props.product)
   chooseProduct.value = true;
-  store.commit("INCREMENTCART", product);
+  cart.increment(product)
+  // store.commit("INCREMENTCART", product);
 }
-const cart = reactive(store.getters.getCart)
+const cartStore = useCart()
+const cart = reactive(cartStore)
 watch(cart, () => {
   const result = cart.filter(
       (el: Product) => el.id === props.product.id,

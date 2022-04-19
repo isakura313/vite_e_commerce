@@ -12,14 +12,15 @@
 
 <script lang="ts" setup>
 import {defineProps, ref, onMounted, reactive, watch} from "vue";
-import {useStore} from "@/store/index";
+// import {useStore} from "@/store/index";
+import { useCart } from '@/stores/cart'
 import {Product} from "../types";
 import type {Ref} from 'vue';
 import Plus from "vue-material-design-icons/Plus.vue";
 import Minus from "vue-material-design-icons/Minus.vue";
 
-const store = useStore();
-const cart:[] = reactive(store.getters.getCart)
+const cartStore = useCart();
+const cart:[] = reactive(cartStore)
 const props = defineProps(['product']);
 const countOfChoosen: Ref<number> = ref(0)
 
