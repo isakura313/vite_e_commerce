@@ -373,7 +373,7 @@
     "@vue/compiler-dom" "3.2.28"
     "@vue/shared" "3.2.28"
 
-"@vue/devtools-api@^6.0.0-beta.11", "@vue/devtools-api@^6.0.0-beta.18", "@vue/devtools-api@^6.1.4":
+"@vue/devtools-api@^6.0.0-beta.18", "@vue/devtools-api@^6.1.4":
   "integrity" "sha512-IiA0SvDrJEgXvVxjNkHPFfDx6SXw0b/TUkqMcDZWNg9fnCAHbTpoo59YfJ9QLFkwa3raau5vSlRVzMSLDnfdtQ=="
   "resolved" "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.1.4.tgz"
   "version" "6.1.4"
@@ -1053,11 +1053,6 @@
   "integrity" "sha512-ZwrFkGJxUR3EIoXtO+yVE69Eb7KlixbaeAWfBQB9vVsNn/o+Yw69gBWSSDK825hQNdN+wF8zELf3dFNl/kxkUA=="
   "resolved" "https://registry.npmjs.org/cookie/-/cookie-0.4.1.tgz"
   "version" "0.4.1"
-
-"core-js@^3.8.1":
-  "integrity" "sha512-8h9jBweRjMiY+ORO7bdWSeWfHhLPO7whobj7Z2Bl0IDo00C228EdGgH7FE4jGumbEjzcFfkfW8bXgdkEDhnwHQ=="
-  "resolved" "https://registry.npmjs.org/core-js/-/core-js-3.22.0.tgz"
-  "version" "3.22.0"
 
 "core-util-is@1.0.2":
   "integrity" "sha1-tf1UIgqivFq1eqtxQMlAdUUDwac="
@@ -3945,11 +3940,6 @@
   optionalDependencies:
     "fsevents" "~2.3.2"
 
-"vue-count-to@^1.0.13":
-  "integrity" "sha512-6R4OVBVNtQTlcbXu6SJ8ENR35M2/CdWt3Jmv57jOUM+1ojiFmjVGvZPH8DfHpMDSA+ITs+EW5V6qthADxeyYOQ=="
-  "resolved" "https://registry.npmjs.org/vue-count-to/-/vue-count-to-1.0.13.tgz"
-  "version" "1.0.13"
-
 "vue-demi@*":
   "integrity" "sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q=="
   "resolved" "https://registry.npmjs.org/vue-demi/-/vue-demi-0.12.5.tgz"
@@ -3993,7 +3983,7 @@
   dependencies:
     "@vue/devtools-api" "^6.0.0-beta.18"
 
-"vue@^2.6.12 || ^3.1.1", "vue@^2.6.14 || ^3.2.0", "vue@^3.0.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.0.1", "vue@^3.0.2", "vue@^3.2.25", "vue@>= 3 < 4", "vue@>=3", "vue@>=3.0.0", "vue@~3.2", "vue@3.2.28":
+"vue@^2.6.12 || ^3.1.1", "vue@^2.6.14 || ^3.2.0", "vue@^3.0.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.0.1", "vue@^3.2.25", "vue@>=3", "vue@>=3.0.0", "vue@~3.2", "vue@3.2.28":
   "integrity" "sha512-U+jBwVh3RQ9AgceLFdT7i2FFujoC+kYuGrKo5y8aLluWKZWPS40WgA2pyYHaiSX9ydCbEGr3rc/JzdqskzD95g=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-3.2.28.tgz"
   "version" "3.2.28"
@@ -4003,21 +3993,6 @@
     "@vue/runtime-dom" "3.2.28"
     "@vue/server-renderer" "3.2.28"
     "@vue/shared" "3.2.28"
-
-"vue3-count-to@^1.1.2":
-  "integrity" "sha512-C5AvlcGfyM4XvFqPDkni94rqGd5K/+RB+B4xv/1NQx3RrdC+GvXPFzeXW5hWL/jh8ehWLm4LITyK0eMKf4iJbg=="
-  "resolved" "https://registry.npmjs.org/vue3-count-to/-/vue3-count-to-1.1.2.tgz"
-  "version" "1.1.2"
-  dependencies:
-    "core-js" "^3.8.1"
-    "vue-count-to" "^1.0.13"
-
-"vuex@~4.0":
-  "integrity" "sha512-M6r8uxELjZIK8kTKDGgZTYX/ahzblnzC4isU1tpmEuOIIKmV+TRdc+H4s8ds2NuZ7wpUTdGRzJRtoj+lI+pc0Q=="
-  "resolved" "https://registry.npmjs.org/vuex/-/vuex-4.0.2.tgz"
-  "version" "4.0.2"
-  dependencies:
-    "@vue/devtools-api" "^6.0.0-beta.11"
 
 "wait-on@~6.0":
   "integrity" "sha512-tnUJr9p5r+bEYXPUdRseolmz5XqJTTj98JgOsfBn7Oz2dxfE2g3zw1jE+Mo8lopM3j3et/Mq1yW7kKX6qw7RVw=="
