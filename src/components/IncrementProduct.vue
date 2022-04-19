@@ -12,20 +12,24 @@
 
 <script lang="ts" setup>
 import {defineProps, ref, onMounted, reactive, watch} from "vue";
+import {storeToRefs} from "pinia";
 // import {useStore} from "@/store/index";
-import { useCart } from '@/stores/cart'
+// import { storeToRefs } from 'pinia'
+import { useStore } from '@/stores/cart'
 import {Product} from "../types";
+
 import type {Ref} from 'vue';
 import Plus from "vue-material-design-icons/Plus.vue";
 import Minus from "vue-material-design-icons/Minus.vue";
 
-const cartStore = useCart();
-const cart:[] = reactive(cartStore)
+const store = useStore();
+const { cart } = storeToRefs(store)
+// const cart:[] = reactive(cartStore)
 const props = defineProps(['product']);
 const countOfChoosen: Ref<number> = ref(0)
 
 onMounted(() => {
-  const result = cart.filter(
+  const result = cart.value.filter(
       (el:Product) => el.id === props.product.id,
   );
   countOfChoosen.value = result[0].count
@@ -33,15 +37,16 @@ onMounted(() => {
 
 function IncrementCart(product:Product):void {
   // TODO  расширить  keyOfTypes
-  store.commit("INCREMENTCART", product)
+
+  store.increment(product)
 }
 
 function DecrementCart(id:number):void {
-  store.commit("DECREMENTCART", id)
+  store.decrement(id)
 }
 
-watch(cart, () => {
-  const result = cart.filter(
+watch(cart.value, () => {
+  const result = cart.value.filter(
       (el: Product) => el.id === props.product.id,
   );
   countOfChoosen.value = result[0].count

@@ -51,11 +51,13 @@
 
 <script lang="ts" setup>
   // import { useStore } from "@/store/index";
-  import { useCart } from '@/stores/cart'
+  import { useStore } from '@/stores/cart'
+  import { storeToRefs } from 'pinia'
+
   import CustomSelect from '@/components/CustomSelect.vue';
   import {PropType, defineProps, reactive, ref, watch, computed} from "vue";
   import IncrementProduct from "./IncrementProduct.vue";
-  const cartStore = useCart();
+  const store = useStore();
   const props = defineProps(['product'])
   // const store = useStore();
   interface Product {
@@ -70,7 +72,7 @@
       1,2,3,4,5
   ])
   const chooseProduct = ref(false)
-  const cart = computed(() => cartStore);
+  const {cart} = storeToRefs(store)
 
   function updateCount(count){
     // store.commit("SETCOUNT", {id:props.product.id, count:count });

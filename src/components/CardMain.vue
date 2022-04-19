@@ -39,7 +39,8 @@
 
 <script lang='ts' setup>
 import {PropType, defineComponent, defineProps, ref, reactive, watch, onMounted} from "vue";
-import { useCart } from '@/stores/cart'
+import { storeToRefs } from 'pinia'
+import { useStore } from '@/stores/cart'
 
 import IncrementProduct from "./IncrementProduct.vue";
 const props = defineProps(['product'])
@@ -53,10 +54,13 @@ interface Product {
   discount: boolean;
   count?: number;
 }
+const store = useStore()
+
+const { cart } = storeToRefs(store)
 const chooseProduct = ref(false);
 const inStore = ref(false);
 onMounted( () => {
-  const result = cart.filter(
+  const result = cart.value.filter(
       (el: Product) => el.id === props.product.id,
   );
   if (result.length !== 0) {
@@ -75,13 +79,11 @@ onMounted( () => {
 function addToCart(product: Product){
   console.log(props.product)
   chooseProduct.value = true;
-  cart.increment(product)
+  store.increment(product)
   // store.commit("INCREMENTCART", product);
 }
-const cartStore = useCart()
-const cart = reactive(cartStore)
-watch(cart, () => {
-  const result = cart.filter(
+watch(cart.value, () => {
+  const result = cart.value.filter(
       (el: Product) => el.id === props.product.id,
   );
   if (result.length !== 0) {
