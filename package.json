@@ -3,7 +3,7 @@
   "version": "1.11.0",
   "scripts": {
     "dev": "json-server db.json --port 5000 & vite",
-    "dev_win": "start json-server db.json --port 5000 & start vite",
+    "dev_pc": "start json-server db.json --port 5000 & start vite",
     "build": "vite build",
     "server": "json-server db.json --port 5000",
     "preview": "vite build && vite preview",

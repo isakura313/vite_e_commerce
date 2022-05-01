@@ -29,7 +29,7 @@
 <script setup lang="ts">
 // import {useStore, Mutation} from "@/store/index";
 // import { CountTo } from 'vue3-count-to';
-import { useStore } from '@/stores/cart'
+import {useStore} from '@/stores/cart'
 import {storeToRefs} from 'pinia';
 import CartProduct from "../components/CartProduct.vue";
 import {computed, onMounted, watch, ref} from "vue";
