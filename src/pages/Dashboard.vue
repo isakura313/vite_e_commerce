@@ -16,6 +16,7 @@ import {
 } from "echarts/components";
 import VChart, { THEME_KEY } from "vue-echarts";
 import { ref, defineComponent } from "vue";
+import axios from 'axios'
 
 use([
   CanvasRenderer,
@@ -26,12 +27,12 @@ use([
 ]);
 
 export default defineComponent({
-  name: "HelloWorld",
+  name: "Dashboard",
   components: {
     VChart
   },
   provide: {
-    [THEME_KEY]: "dark"
+    [THEME_KEY]: "light"
   },
   setup () {
     const option = ref({

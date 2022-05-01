@@ -32,12 +32,10 @@ const selected = ref(props.default
     ? props.default
     : props.options.length > 0
         ? props.options[0]
-        : null,)
-const open = ref(false)
-onMounted(()=>{
-  emit("input", selected.value);
-})
+        : null)
 
+const open = ref(false)
+emit("input", selected.value);
 </script>
 
 
