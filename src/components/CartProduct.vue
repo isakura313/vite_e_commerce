@@ -6,7 +6,7 @@
           :style="{ backgroundImage: `url(${product.img})` }"
           class="w-64 bg-no-repeat bg-center bg-contain"
         ></div>
-        <div class="flex flex-col w-2/5 justify-around h-auto">
+        <div class="flex flex-col w-48 justify-around h-auto">
         <router-link
             to="/"
             class="font-14"
@@ -75,10 +75,15 @@
   const {cart} = storeToRefs(store)
 
   function updateCount(count){
-    // store.commit("SETCOUNT", {id:props.product.id, count:count });
+    const payload = {
+      id: props.product.id,
+      count
+    }
+    store.setCount(payload);
   }
 
   const  deleteFromCard =(id: number)=> {
+    store.deleteItem(id);
   }
   const inStore = ref(false)
   // const cart = reactive(store.getters.getCart);

@@ -16,7 +16,7 @@
       </div>
       <span v-else class="font-bold">{{ product.oldprice }} ₽</span>
       <router-link
-          to="/"
+          :to="{ name: 'product', params: { id: '1' }}"
           class="hover:text-indigo-700 hover:font-bold font-bold"
       >{{ product.name }}
       </router-link

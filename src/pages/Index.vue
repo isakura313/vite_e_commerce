@@ -17,12 +17,7 @@
 
 
 <script setup lang="ts">
-// type Product = {
-//   id:1,
-//   discount: true,
-//   name:'',
-//   price:0
-// }
+
   import Loader from "@/components/Loader.vue";
   import CardMain from "@/components/CardMain.vue";
   import { ref, onMounted } from "vue";

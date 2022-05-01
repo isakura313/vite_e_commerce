@@ -22,7 +22,8 @@
     "vue": "~3.2",
     "vue-echarts": "^6.0.2",
     "vue-material-design-icons": "^5.0.0",
-    "vue-router": "~4.0"
+    "vue-router": "~4.0",
+    "vue3-autocounter": "^1.0.6"
   },
   "devDependencies": {
     "@cypress/vite-dev-server": "~2.2",
