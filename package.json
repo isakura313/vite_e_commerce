@@ -20,6 +20,7 @@
     "json-server": "^0.17.0",
     "pinia": "^2.0.13",
     "vue": "~3.2",
+    "vue-easy-lightbox": "^1.4.1",
     "vue-echarts": "^6.0.2",
     "vue-material-design-icons": "^5.0.0",
     "vue-router": "~4.0",

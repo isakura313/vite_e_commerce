@@ -3955,6 +3955,11 @@
   "resolved" "https://registry.npmjs.org/vue-demi/-/vue-demi-0.12.1.tgz"
   "version" "0.12.1"
 
+"vue-easy-lightbox@^1.4.1":
+  "integrity" "sha512-bZHepAokLwiy77qLx45n3WxnLRg4M2gcffpu2Q/H71C7UgSxxXgAmbJdIrtOFni0VwA1rFxkfBBP1Ajn9FY2OA=="
+  "resolved" "https://registry.npmjs.org/vue-easy-lightbox/-/vue-easy-lightbox-1.4.1.tgz"
+  "version" "1.4.1"
+
 "vue-echarts@^6.0.2":
   "integrity" "sha512-9xDokauJtAc389MNKbwi1I0VDmp4Y6ndAJTQ8T9K7H0ffosTe1OJSJbUtkT7/fVLDFzlCcmg2TfAKaMzbpg5yQ=="
   "resolved" "https://registry.npmjs.org/vue-echarts/-/vue-echarts-6.0.2.tgz"
