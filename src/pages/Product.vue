@@ -1,10 +1,7 @@
 <template>
   <div>
     {{ productInfo.id }}
-    <vue-picture-swipe :items="[
-    {src: 'http://example.org/xl.jpg',thumbnail: 'http://example.org/sm1.jpg',w: 600,h: 400, title: 'Will be used for caption'},
-    {src: 'http://example.org/xxl.jpg',thumbnail: 'http://example.org/sm2.jpg',w: 1200,h: 900}
-  ]"></vue-picture-swipe>
+    <vue-picture-swipe :items="items" class="gallery"></vue-picture-swipe>
   </div>
 
 </template>
@@ -20,6 +17,7 @@ import axios from 'axios';
 import {ref, computed, onMounted} from 'vue'
 import {Product} from '../types/';
 const route = useRoute()
+const items = ref([])
 const id = ref(route.params.id)
 const productInfo = ref('')
 onMounted(async () => {
@@ -28,7 +26,26 @@ onMounted(async () => {
     url: `http://localhost:5000/products/${route.params.id}`
   });
   productInfo.value = results.data;
-  loader.value = true;
+  productInfo.value.imgSrc.map((item:string)=>{
+    items.value.push({
+      src: item,
+      thumbnail: item,
+      // w: 500,
+      h: 500,
+      alt: 'some numbers on a grey background'
+    })
+  })
+  // loader.value = true;
 })
 
 </script>
+
+<style>
+.gallery img{
+  height: 200px;
+}
+.my-gallery{
+  display: flex;
+}
+
+</style>

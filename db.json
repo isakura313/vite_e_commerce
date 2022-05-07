@@ -4,6 +4,11 @@
             "id": 367308886,
             "name": "Фен для волос Rowenta",
             "img": "https://cdn1.ozone.ru/s3/multimedia-3/wc1200/6139148103.jpg",
+            "imgSrc": ["https://cdn1.ozone.ru/s3/multimedia-x/wc1200/6255803397.jpg",
+                        "https://cdn1.ozone.ru/s3/multimedia-c/wc1200/6255803484.jpg",
+                        "https://cdn1.ozone.ru/s3/multimedia-m/wc1200/6255803530.jpg",
+                        "https://cdn1.ozone.ru/s3/multimedia-k/wc1200/6255803384.jpg"
+            ],
             "price": 2929,
             "oldprice": 4560,
             "discount": true
@@ -12,6 +17,11 @@
             "id": 272350687,
             "name": "Смартфон Xiaomi Redmi Note",
             "img": "https://cdn1.ozone.ru/s3/multimedia-s/wc1200/6067361284.jpg",
+            "imgSrc": ["https://cdn1.ozone.ru/s3/multimedia-s/wc1200/6067361284.jpg",
+                "https://cdn1.ozone.ru/s3/multimedia-z/wc1200/6067361291.jpg",
+                "https://cdn1.ozone.ru/s3/multimedia-e/wc1200/6067361306.jpg",
+                "https://cdn1.ozone.ru/s3/multimedia-q/wc1200/6067361318.jpg"
+            ],
             "price": 17980,
             "oldprice": 19256,
             "discount": true
@@ -20,6 +30,11 @@
             "id": 348003256,
             "name": "Бытовой пылесос Philips XB2123/08",
             "img":"https://cdn1.ozone.ru/s3/multimedia-a/wc1200/6125707438.jpg",
+            "imgSrc": ["https://cdn1.ozone.ru/s3/multimedia-w/wc1200/6248485604.jpg",
+                        "https://cdn1.ozone.ru/s3/multimedia-b/wc1200/6125707367.jpg",
+                        "https://cdn1.ozone.ru/s3/multimedia-b/wc1200/6125707403.jpg",
+                        "https://cdn1.ozone.ru/s3/multimedia-6/wc1200/6125707434.jpgs"
+            ],
             "price": 6790,
             "oldprice": 7356,
             "discount": true
@@ -28,6 +43,12 @@
             "id": 200689781,
             "name": "Утюг Tefal Turbo",
             "img":"https://cdn1.ozone.ru/s3/multimedia-m/wc1200/6025120498.jpg",
+            "imgSrc": [
+                "https://cdn1.ozone.ru/s3/multimedia-n/wc1200/6025120499.jpg",
+                "https://cdn1.ozone.ru/s3/multimedia-k/wc1200/6025120496.jpg",
+                "https://cdn1.ozone.ru/s3/multimedia-i/wc1200/6116803458.jpg",
+                "https://cdn1.ozone.ru/s3/multimedia-e/wc1200/6116803454.jpg"
+            ],
             "price": 5990,
             "oldprice": 7356,
             "discount": true
@@ -68,6 +89,7 @@
             "id": 391851832,
             "name": "Майка FAXE красная",
             "img":"https://cdn1.ozone.ru/s3/multimedia-3/wc1200/6151833819.jpg",
+            "imgSrc": ["https://cdn1.ozone.ru/s3/multimedia-3/wc1200/6151833819.jpg"],
             "price": 1599,
             "oldprice": 2099,
             "discount": true
@@ -76,6 +98,7 @@
             "id": 391851824,
             "name": "Майка FAXE желтая",
             "img":"https://cdn1.ozone.ru/s3/multimedia-y/wc1200/6151833814.jpg",
+            "imgSrc": ["https://cdn1.ozone.ru/s3/multimedia-y/wc1200/6151833814.jpg"],
             "price": 1599,
             "oldprice": 2099,
             "discount": true

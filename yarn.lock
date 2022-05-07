@@ -1419,11 +1419,6 @@
     "is-date-object" "^1.0.1"
     "is-symbol" "^1.0.2"
 
-"esbuild-windows-64@0.13.15":
-  "integrity" "sha512-9aMsPRGDWCd3bGjUIKG/ZOJPKsiztlxl/Q3C1XDswO6eNX/Jtwu4M+jb6YDH9hRSUflQWX0XKAfWzgy5Wk54JQ=="
-  "resolved" "https://registry.npmjs.org/esbuild-windows-64/-/esbuild-windows-64-0.13.15.tgz"
-  "version" "0.13.15"
-
 "esbuild@^0.13.12":
   "integrity" "sha512-raCxt02HBKv8RJxE8vkTSCXGIyKHdEdGfUmiYb8wnabnaEmHzyW7DCHb5tEN0xU8ryqg5xw54mcwnYkC4x3AIw=="
   "resolved" "https://registry.npmjs.org/esbuild/-/esbuild-0.13.15.tgz"
@@ -4008,6 +4003,11 @@
   "integrity" "sha512-jOgCD2WaOjt/tOAAGKDm2DTyQRdKyfqJv5ElUz/vR0ZJgUd4yDd6UX6+2YU3LQpY4qoFNZkzLloAfALAqK041g=="
   "resolved" "https://registry.npmjs.org/vue3-autocounter/-/vue3-autocounter-1.0.6.tgz"
   "version" "1.0.6"
+
+"vue3-picture-swipe@^3.0.5":
+  "integrity" "sha512-AhI4SmXeniVei26o29e4zst6PUtLAZLZuYVmnijkWwWf4BIQMaHpZTTAKaMsCkRoJK/UJztbTdpdR9c0CW3s8Q=="
+  "resolved" "https://registry.npmjs.org/vue3-picture-swipe/-/vue3-picture-swipe-3.0.5.tgz"
+  "version" "3.0.5"
 
 "wait-on@~6.0":
   "integrity" "sha512-tnUJr9p5r+bEYXPUdRseolmz5XqJTTj98JgOsfBn7Oz2dxfE2g3zw1jE+Mo8lopM3j3et/Mq1yW7kKX6qw7RVw=="
