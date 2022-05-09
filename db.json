@@ -1,110 +1,200 @@
 {
-    "products":[
+  "products": [
+    {
+      "id": 367308886,
+      "name": "Фен для волос Rowenta",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-3/wc1200/6139148103.jpg",
+      "imgSrc": [
+        "https://cdn1.ozone.ru/s3/multimedia-x/wc1200/6255803397.jpg",
+        "https://cdn1.ozone.ru/s3/multimedia-c/wc1200/6255803484.jpg",
+        "https://cdn1.ozone.ru/s3/multimedia-m/wc1200/6255803530.jpg",
+        "https://cdn1.ozone.ru/s3/multimedia-k/wc1200/6255803384.jpg"
+      ],
+      "imgSizes": [
         {
-            "id": 367308886,
-            "name": "Фен для волос Rowenta",
-            "img": "https://cdn1.ozone.ru/s3/multimedia-3/wc1200/6139148103.jpg",
-            "imgSrc": ["https://cdn1.ozone.ru/s3/multimedia-x/wc1200/6255803397.jpg",
-                        "https://cdn1.ozone.ru/s3/multimedia-c/wc1200/6255803484.jpg",
-                        "https://cdn1.ozone.ru/s3/multimedia-m/wc1200/6255803530.jpg",
-                        "https://cdn1.ozone.ru/s3/multimedia-k/wc1200/6255803384.jpg"
-            ],
-            "price": 2929,
-            "oldprice": 4560,
-            "discount": true
+          "width": 901,
+          "height": 1200
         },
         {
-            "id": 272350687,
-            "name": "Смартфон Xiaomi Redmi Note",
-            "img": "https://cdn1.ozone.ru/s3/multimedia-s/wc1200/6067361284.jpg",
-            "imgSrc": ["https://cdn1.ozone.ru/s3/multimedia-s/wc1200/6067361284.jpg",
-                "https://cdn1.ozone.ru/s3/multimedia-z/wc1200/6067361291.jpg",
-                "https://cdn1.ozone.ru/s3/multimedia-e/wc1200/6067361306.jpg",
-                "https://cdn1.ozone.ru/s3/multimedia-q/wc1200/6067361318.jpg"
-            ],
-            "price": 17980,
-            "oldprice": 19256,
-            "discount": true
+          "width": 412,
+          "height": 1200
         },
         {
-            "id": 348003256,
-            "name": "Бытовой пылесос Philips XB2123/08",
-            "img":"https://cdn1.ozone.ru/s3/multimedia-a/wc1200/6125707438.jpg",
-            "imgSrc": ["https://cdn1.ozone.ru/s3/multimedia-w/wc1200/6248485604.jpg",
-                        "https://cdn1.ozone.ru/s3/multimedia-b/wc1200/6125707367.jpg",
-                        "https://cdn1.ozone.ru/s3/multimedia-b/wc1200/6125707403.jpg",
-                        "https://cdn1.ozone.ru/s3/multimedia-6/wc1200/6125707434.jpgs"
-            ],
-            "price": 6790,
-            "oldprice": 7356,
-            "discount": true
+          "width": 1200,
+          "height": 800
         },
         {
-            "id": 200689781,
-            "name": "Утюг Tefal Turbo",
-            "img":"https://cdn1.ozone.ru/s3/multimedia-m/wc1200/6025120498.jpg",
-            "imgSrc": [
-                "https://cdn1.ozone.ru/s3/multimedia-n/wc1200/6025120499.jpg",
-                "https://cdn1.ozone.ru/s3/multimedia-k/wc1200/6025120496.jpg",
-                "https://cdn1.ozone.ru/s3/multimedia-i/wc1200/6116803458.jpg",
-                "https://cdn1.ozone.ru/s3/multimedia-e/wc1200/6116803454.jpg"
-            ],
-            "price": 5990,
-            "oldprice": 7356,
-            "discount": true
-        },
-        {
-            "id": 192732761,
-            "name": "Кофемашина Nivona CafeRomatica NICR 520",
-            "img":"https://cdn1.ozone.ru/s3/multimedia-r/wc1200/6211585815.jpg",
-            "price": 33990,
-            "oldprice": 35999,
-            "discount": true
-        },
-        {
-            "id": 262458972,
-            "name": "Призрак в кольчуге",
-            "img":"https://cdn1.ozone.ru/s3/multimedia-m/wc1200/6189698062.jpg",
-            "price": 115,
-            "oldprice": 156,
-            "discount": true
-        },
-        {
-            "id": 145152066,
-            "name": "Туалетная бумага Zewa Deluxe Белая",
-            "img":"https://cdn1.ozone.ru/s3/multimedia-q/wc1200/6148881554.jpg",
-            "price": 389,
-            "oldprice": 389,
-            "discount": false
-        },
-        {
-            "id": 186782306,
-            "name": "Зубная паста Biorepair Gum",
-            "img":"https://cdn1.ozone.ru/s3/multimedia-a/wc1200/6248109670.jpg",
-            "price": 578,
-            "oldprice": 999,
-            "discount": true
-        },
-        {
-            "id": 391851832,
-            "name": "Майка FAXE красная",
-            "img":"https://cdn1.ozone.ru/s3/multimedia-3/wc1200/6151833819.jpg",
-            "imgSrc": ["https://cdn1.ozone.ru/s3/multimedia-3/wc1200/6151833819.jpg"],
-            "price": 1599,
-            "oldprice": 2099,
-            "discount": true
-        },
-        {
-            "id": 391851824,
-            "name": "Майка FAXE желтая",
-            "img":"https://cdn1.ozone.ru/s3/multimedia-y/wc1200/6151833814.jpg",
-            "imgSrc": ["https://cdn1.ozone.ru/s3/multimedia-y/wc1200/6151833814.jpg"],
-            "price": 1599,
-            "oldprice": 2099,
-            "discount": true
+          "width": 822,
+          "height": 1200
         }
-    ],
-    "cart":[
-        
-    ]
+      ],
+      "details": {
+        "Макс. мощность, Вт": 1800,
+        "Количество температурных режимов": 3,
+        "Особенности конструкции фена, выпрямителя волос": "Петля для подвешивания",
+        "Страна-изготовитель": "Китай",
+        "Гарантийный срок": "2 года",
+        "Тип мотора": "DC",
+        "Количество скоростей": 2,
+        "Дополнительные режимы":"Ионизация, Холодный воздух",
+        "Насадки для приборов по уходу за волосами": "Диффузор, Концентратор",
+        "Количество насадок":2
+      },
+      "price": 2929,
+      "oldprice": 4560,
+      "discount": true
+    },
+    {
+      "id": 272350687,
+      "name": "Смартфон Xiaomi Redmi Note",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-s/wc1200/6067361284.jpg",
+      "imgSrc": [
+        "https://cdn1.ozone.ru/s3/multimedia-s/wc1200/6067361284.jpg",
+        "https://cdn1.ozone.ru/s3/multimedia-z/wc1200/6067361291.jpg",
+        "https://cdn1.ozone.ru/s3/multimedia-e/wc1200/6067361306.jpg",
+        "https://cdn1.ozone.ru/s3/multimedia-q/wc1200/6067361318.jpg"
+      ],
+      "imgSizes": [
+        {
+          "width": 561,
+          "height": 1200
+        },
+        {
+          "width": 561,
+          "height": 1200
+        },
+        {
+          "width": 412,
+          "height": 1200
+        },
+        {
+          "width": 413,
+          "height": 1200
+        }
+      ],
+      "price": 17980,
+      "oldprice": 19256,
+      "discount": true
+    },
+    {
+      "id": 348003256,
+      "name": "Бытовой пылесос Philips XB2123/08",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-a/wc1200/6125707438.jpg",
+      "imgSrc": [
+        "https://cdn1.ozone.ru/s3/multimedia-w/wc1200/6248485604.jpg",
+        "https://cdn1.ozone.ru/s3/multimedia-b/wc1200/6125707367.jpg",
+        "https://cdn1.ozone.ru/s3/multimedia-b/wc1200/6125707403.jpg",
+        "https://cdn1.ozone.ru/s3/multimedia-6/wc1200/6125707434.jpg"
+      ],
+      "imgSizes": [
+        {
+          "width": 790,
+          "height": 1200
+        },
+        {
+          "width": 600,
+          "height": 600
+        },
+        {
+          "width": 600,
+          "height": 600
+        },
+        {
+          "width": 415,
+          "height": 589
+        }
+      ],
+      "price": 6790,
+      "oldprice": 7356,
+      "discount": true
+    },
+    {
+      "id": 200689781,
+      "name": "Утюг Tefal Turbo",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-m/wc1200/6025120498.jpg",
+      "imgSrc": [
+        "https://cdn1.ozone.ru/s3/multimedia-n/wc1200/6025120499.jpg",
+        "https://cdn1.ozone.ru/s3/multimedia-k/wc1200/6025120496.jpg",
+        "https://cdn1.ozone.ru/s3/multimedia-i/wc1200/6116803458.jpg",
+        "https://cdn1.ozone.ru/s3/multimedia-e/wc1200/6116803454.jpg"
+      ],
+      "imgSizes": [
+        {
+          "width": 1200,
+          "height": 754
+        },
+        {
+          "width": 1068,
+          "height": 1200
+        },
+        {
+          "width": 1068,
+          "height": 1200
+        },
+        {
+          "width": 797,
+          "height": 1200
+        }
+      ],
+      "price": 5990,
+      "oldprice": 7356,
+      "discount": true
+    },
+    {
+      "id": 192732761,
+      "name": "Кофемашина Nivona CafeRomatica NICR 520",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-r/wc1200/6211585815.jpg",
+      "price": 33990,
+      "oldprice": 35999,
+      "discount": true
+    },
+    {
+      "id": 262458972,
+      "name": "Призрак в кольчуге",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-m/wc1200/6189698062.jpg",
+      "price": 115,
+      "oldprice": 156,
+      "discount": true
+    },
+    {
+      "id": 145152066,
+      "name": "Туалетная бумага Zewa Deluxe Белая",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-q/wc1200/6148881554.jpg",
+      "price": 389,
+      "oldprice": 389,
+      "discount": false
+    },
+    {
+      "id": 186782306,
+      "name": "Зубная паста Biorepair Gum",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-a/wc1200/6248109670.jpg",
+      "price": 578,
+      "oldprice": 999,
+      "discount": true
+    },
+    {
+      "id": 391851832,
+      "name": "Майка FAXE красная",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-3/wc1200/6151833819.jpg",
+      "imgSrc": [
+        "https://cdn1.ozone.ru/s3/multimedia-3/wc1200/6151833819.jpg"
+      ],
+      "price": 1599,
+      "oldprice": 2099,
+      "discount": true
+    },
+    {
+      "id": 391851824,
+      "name": "Майка FAXE желтая",
+      "img": "https://cdn1.ozone.ru/s3/multimedia-y/wc1200/6151833814.jpg",
+      "imgSrc": [
+        "https://cdn1.ozone.ru/s3/multimedia-y/wc1200/6151833814.jpg"
+      ],
+      "price": 1599,
+      "oldprice": 2099,
+      "discount": true
+    }
+  ],
+  "cart": [
+  ]
 }
